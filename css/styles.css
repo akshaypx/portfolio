@@ -1,0 +1,28 @@
+h1,
+h2,
+h3,
+a,
+strong,
+button {
+  font-family: "Montserrat", sans-serif;
+  color: #ee964b;
+}
+h1,
+h2,
+h3 {
+  color: #c44900;
+}
+.navbar {
+  background-color: #183a37 !important;
+}
+body {
+  background-color: #efd6ac;
+}
+p,
+div {
+  font-family: "Esteban", serif;
+}
+button {
+  background-color: #432534 !important;
+  color: #efd6ac !important;
+}
