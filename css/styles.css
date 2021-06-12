@@ -10,13 +10,25 @@ button {
 h1,
 h2,
 h3 {
+  font-weight: bold;
   color: #c44900;
 }
-.navbar {
-  background-color: #183a37 !important;
+h1 {
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
+.navbar {
+  background-color: #432534 !important;
+}
+.navbar-nav {
+  margin-left: auto;
+}
+
 body {
   background-color: #efd6ac;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 p,
 div {

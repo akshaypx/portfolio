@@ -8,7 +8,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Esteban&family=Montserrat:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Esteban&family=Montserrat:ital,wght@0,300;0,700;1,200&display=swap"
       rel="stylesheet"
     />
 
@@ -58,12 +58,13 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <meta name="theme-color" content="#7952b3" />
 
-    <title>PortFolio Website</title>
+    <title>My Portfolio</title>
   </head>
   <body>
+    <!-- Navbar -->
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Akshay Srivastava</a>
+        <a class="navbar-brand" href="#">Akshay's Portfolio</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -76,11 +77,9 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
+          <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"
-                >About Me</a
-              >
+              <a class="nav-link" aria-current="page" href="#">About Me</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Projects</a>
@@ -103,116 +102,46 @@
     </nav>
     <!-- <h1>Hello, world!</h1> -->
     <div class="container py-5">
-      <h1 class="display-5 fw-bold">I am a Web Developer!</h1>
-      <p class="col-md-8 fs-4">
-        My name is <strong>Akshay Srivastava</strong>. I am a Computer Science
-        undergraduate student with strong base in Web Development and problem
-        solving skills, currently looking for job/intern opportunities in a
-        challenging work environment. I consider myself hard working, confident
-        team player and want to become a valuable asset for the organization I
-        work for.
-      </p>
-      <button class="btn btn-primary btn-lg" type="button">
-        Example button
-      </button>
+      <div class="row">
+        <div class="col-md-6 fs-4">
+          <h1 class="display-5 fw-bold">Hey there! Welcome.</h1>
+          <p class="">
+            My name is <strong>Akshay Srivastava</strong>. I am a Computer
+            Science undergraduate student with strong base in Web Development
+            and problem solving skills, currently looking for job/intern
+            opportunities in a challenging work environment. I consider myself
+            hard working, confident team player and want to become a valuable
+            asset for the organization I work for.
+          </p>
+          <button class="btn btn-primary btn-lg" type="button">Github</button>
+          <button class="btn btn-primary btn-lg" type="button">Linkedin</button>
+        </div>
+        <div class="col-md-6 fs-4">
+          <picture>
+            <img
+              src="./images/profile.jpg"
+              class="img-fluid rounded-circle shadow rounded"
+              alt=""
+            />
+          </picture>
+        </div>
+      </div>
     </div>
     <!-- Qualification Section -->
     <div class="container">
       <h2 class="pb-2 border-bottom">Academic Qualifications</h2>
-      <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button
-              class="accordion-button"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseOne"
-              aria-expanded="true"
-              aria-controls="collapseOne"
-            >
-              Accordion Item #1
-            </button>
-          </h2>
-          <div
-            id="collapseOne"
-            class="accordion-collapse collapse show"
-            aria-labelledby="headingOne"
-            data-bs-parent="#accordionExample"
-          >
-            <div class="accordion-body">
-              <strong>This is the first item's accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingTwo">
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseTwo"
-              aria-expanded="false"
-              aria-controls="collapseTwo"
-            >
-              Accordion Item #2
-            </button>
-          </h2>
-          <div
-            id="collapseTwo"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingTwo"
-            data-bs-parent="#accordionExample"
-          >
-            <div class="accordion-body">
-              <strong>This is the second item's accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingThree">
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseThree"
-              aria-expanded="false"
-              aria-controls="collapseThree"
-            >
-              Accordion Item #3
-            </button>
-          </h2>
-          <div
-            id="collapseThree"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingThree"
-            data-bs-parent="#accordionExample"
-          >
-            <div class="accordion-body">
-              <strong>This is the third item's accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
-            </div>
-          </div>
-        </div>
+      <div>
+        <ul>
+          <li>
+            <p>10th @ City Montessori School - 92%</p>
+          </li>
+          <li>
+            <p>12th @ City Montessori School - 88%</p>
+          </li>
+          <li>
+            <p>Currently pursuing B.Tech @ JUET, Guna MP.</p>
+          </li>
+        </ul>
       </div>
     </div>
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
@@ -327,11 +256,53 @@
       <h2 class="pb-2 border-bottom">Projects Completed</h2>
       <div class="row g-5 py-5">
         <div class="feature col-md-4">
-          <h2>Featured title</h2>
+          <h2>Restaurant's Landing Page</h2>
           <p>
-            Paragraph of text beneath the heading to explain the heading. We'll
-            add onto it with another sentence and probably just keep going until
-            we run out of words.
+            A Website for your local but delicious food serving Restaurant.
+            Users can browse through a variety of dishes available on their
+            website. Also can book a table and order food online.
+          </p>
+          <a href="#" class="icon-link">
+            Visit
+            <svg class="bi" width="1em" height="1em">
+              <use xlink:href="#chevron-right"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="feature col-md-4">
+          <h2>To Do List</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde
+            deserunt optio veritatis asperiores natus dolores repudiandae a
+            incidunt quasi atque obcaecati nesciunt rem, magnam ipsa, magni eum.
+            Consequuntur, minima quod?
+          </p>
+          <a href="#" class="icon-link">
+            Visit
+            <svg class="bi" width="1em" height="1em">
+              <use xlink:href="#chevron-right"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="feature col-md-4">
+          <h2>Blog Website</h2>
+          <p>
+            A blog page where users can put up their daily blogs. They can
+            publish blogs easily and quickly with just a few clicks.
+          </p>
+          <a href="#" class="icon-link">
+            Visit
+            <svg class="bi" width="1em" height="1em">
+              <use xlink:href="#chevron-right"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="feature col-md-4">
+          <h2>Startup's Website</h2>
+          <p>
+            A landing page for BlackFoxMillennium company. This page has been
+            developed and maintained by a team of developers. Myself being a
+            part of it, have provided with some good changes and fixes.
           </p>
           <a href="#" class="icon-link">
             Call to action
@@ -341,58 +312,14 @@
           </a>
         </div>
         <div class="feature col-md-4">
-          <h2>Featured title</h2>
+          <h2>Keeper Notes</h2>
           <p>
-            Paragraph of text beneath the heading to explain the heading. We'll
-            add onto it with another sentence and probably just keep going until
-            we run out of words.
+            Note taking web application that utilises both frontend and backend
+            web technologies. Users just need to open website and start taking
+            notes. It can be saved and opened later for use.
           </p>
           <a href="#" class="icon-link">
-            Call to action
-            <svg class="bi" width="1em" height="1em">
-              <use xlink:href="#chevron-right"></use>
-            </svg>
-          </a>
-        </div>
-        <div class="feature col-md-4">
-          <h2>Featured title</h2>
-          <p>
-            Paragraph of text beneath the heading to explain the heading. We'll
-            add onto it with another sentence and probably just keep going until
-            we run out of words.
-          </p>
-          <button class="btn btn-light">
-            <a href="#" class="icon-link">
-              Call to action
-              <svg class="bi" width="1em" height="1em">
-                <use xlink:href="#chevron-right"></use>
-              </svg>
-            </a>
-          </button>
-        </div>
-        <div class="feature col-md-4">
-          <h2>Featured title</h2>
-          <p>
-            Paragraph of text beneath the heading to explain the heading. We'll
-            add onto it with another sentence and probably just keep going until
-            we run out of words.
-          </p>
-          <a href="#" class="icon-link">
-            Call to action
-            <svg class="bi" width="1em" height="1em">
-              <use xlink:href="#chevron-right"></use>
-            </svg>
-          </a>
-        </div>
-        <div class="feature col-md-4">
-          <h2>Featured title</h2>
-          <p>
-            Paragraph of text beneath the heading to explain the heading. We'll
-            add onto it with another sentence and probably just keep going until
-            we run out of words.
-          </p>
-          <a href="#" class="icon-link">
-            Call to action
+            Visit
             <svg class="bi" width="1em" height="1em">
               <use xlink:href="#chevron-right"></use>
             </svg>
@@ -521,13 +448,12 @@
 
       <!-- Copyright -->
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-        © 2020 Copyright:
-        <a class="text-white" href="https://mdbootstrap.com/"
-          >MDBootstrap.com</a
-        >
+        © 2021 Copyright:
+        <a class="text-white" href="">Akshay Srivastava</a>
       </div>
       <!-- Copyright -->
     </footer>
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
