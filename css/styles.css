@@ -38,3 +38,26 @@ button {
   background-color: #432534 !important;
   color: #efd6ac !important;
 }
+section {
+  margin: 5%;
+}
+#qualification h1 {
+  margin-top: 10%;
+  margin-bottom: 6%;
+}
+#qualification h2 {
+  opacity: 0.5;
+  margin-top: 3%;
+  margin-bottom: 5%;
+}
+@media only screen and (max-width: 768px) {
+  section {
+    margin-top: 2%;
+  }
+  .img-fuild {
+    padding: 10%;
+  }
+  #hello div {
+    margin-bottom: 50px;
+  }
+}
