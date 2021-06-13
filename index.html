@@ -60,6 +60,64 @@
 
     <title>My Portfolio</title>
     <script src="./js/script.js"></script>
+    <script>
+      var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
+    </script>
   </head>
   <body>
     <!-- Navbar -->
@@ -106,7 +164,7 @@
       <div class="container">
         <div class="row row-eq-height">
           <div class="col-md-6 fs-4">
-            <h1 class="display-1 fw-bold">Hello.</h1>
+            <h1 class="display-1 fw-bold"><a href="" class="typewrite" data-period="2000" data-type='[ "Hello.", "नमस्ते", "Ciao." ]'></a></h1>
             <p class="">
               My name is <strong>Akshay Srivastava</strong>. I am a Computer
               Science undergraduate student with strong base in Web Development
@@ -117,14 +175,7 @@
             </p>
             <button class="btn btn-primary btn-lg" type="button">
               <a href="https://github.com/akshaypx" role="button"
-                ><i class="fab fa-github"> Github</i></a
-              >
-            </button>
-            <button class="btn btn-primary btn-lg" type="button">
-              <a
-                href="https://www.linkedin.com/in/akshay-srivastava-94125b18b/"
-                role="button"
-                ><i class="fab fa-linkedin-in"> LinkedIn</i></a
+                ><i class="fab fa-download"> Download CV</i></a
               >
             </button>
           </div>
@@ -146,13 +197,13 @@
         <h1 class="display-1 fw-bold">Academic Qualification</h1>
         <div>
           <p>
-            <h2>> 10th Standard @ City Montessori School 2015</h2>
+            <h2>> 10th Standard @ City Montessori School 2015 (92%)</h2>
           </p>
           <p>
-            <h2>> 12th Standard @ City Montessori School 2017</h2>
+            <h2>> 12th Standard @ City Montessori School 2017 (88%)</h2>
           </p>
           <p>
-            <h2>> 2018 - Current, B.Tech @ JUET, Guna</h2>
+            <h2>> 2018 - Current, B.Tech @ JUET, Guna (6.9 cgpa)</h2>
           </p>
         </div>
       </div>
@@ -272,7 +323,7 @@
     <section id="contact-me">
       <div class="container">
         <h1 class="display-1 fw-bold">Contact Me</h1>
-        <div class="form">
+        <!-- <div class="form">
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label"
               >Email address</label
@@ -295,6 +346,17 @@
             ></textarea>
           </div>
           <button type="submit" class="btn btn-primary">Send</button>
+        </div> -->
+        <div>
+          <p>
+            <h2>> Email : akshaysrivastava46@gmail.com</h2>
+          </p>
+          <p>
+            <h2>> Ph no. : +91 73 550 44476</h2>
+          </p>
+          <p>
+            <h2>> Address : Lucknow, Uttar Pradesh, India.</h2>
+          </p>
         </div>
       </div>
     </section>
@@ -305,9 +367,9 @@
         <span class="text-muted">Place sticky footer content here.</span>
       </div>
     </footer> -->
-    <footer class="bg-dark text-center text-white">
+    <footer class="bg-dark text-center text-white" id="footer">
       <!-- Grid container -->
-      <div class="container p-4 pb-0">
+      <div class="container p-4 pb-0" >
         <!-- Section: Social media -->
         <section class="mb-4">
           <!-- Facebook -->
@@ -363,7 +425,7 @@
       <!-- Grid container -->
 
       <!-- Copyright -->
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      <div class="text-center p-3" style="background-color: #432534">
         © 2021 Copyright:
         <a class="text-white" href="">Akshay Srivastava</a>
       </div>
